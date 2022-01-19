@@ -29,7 +29,7 @@ HTML에서 java쓸라면 jsp템플릿엔진 쓰는거랑 같은맥락
 
 #### JSX 문법
 
-// (1) return시에 하나의 Dom만 리턴할 수 있다.
+(1) return시에 하나의 Dom만 리턴할 수 있다.
 
 ```javascript
 function App() {
@@ -42,8 +42,7 @@ function App() {
 }
 ```
 
-// (2) 변수선언은 let 혹은 const로만 해야한다. 호이스팅때문에 ^^
-// (2) hoisting 궁금하면 500원!
+(2) 변수선언은 let 혹은 const로만 해야한다. 호이스팅때문에 ^^ hoisting 궁금하면 500원!
 
 ```javascript
 const a = 10;
