@@ -165,4 +165,19 @@ function App() {
       console.log('============= 삽입 ');
       const e4 = [...a4.slice(0, 2), 4, ...a4.slice(2, 3)];
       console.log(e4); // [1,2,4,3] 가 출력된다.
+
+      // 5. map 반복하기
+      console.log('5.============= 반복하기');
+      const a5 = [1, 2, 3];
+      //   for (let i = 0; i < a5.length; i++) {
+      //     console.log(a5[i]);
+      //   }
+      //   a5.forEach((n) => {
+      //     console.log(n);
+      //   }); // a5 출력 변수는 마음대로 적어도된다
+      // return값이 void이다
+      const b5 = a5.map((n) => {
+        return n;
+      });
+      console.log(b5); // 1,2,3
       ```
