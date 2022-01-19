@@ -35,7 +35,7 @@
       console.log(b3); // 2,3
 
       //4. slice 잘라내기
-      console.log('3.============= 잘라내기');
+      console.log('4.============= 잘라내기');
       const a4 = [1, 2, 3];
       const b4 = a4.slice(0, 2); // 0번index부터 1번index까지
       console.log(b4); // [1,2]
@@ -44,9 +44,24 @@
       const d4 = [...a4.slice(0, 2)]; // 스프레드로 흩뿌려주면
       console.log(d4); // [1,2] 가 출력된다.
 
-      console.log('=============');
+      console.log('============= 삽입 ');
       const e4 = [...a4.slice(0, 2), 4, ...a4.slice(2, 3)];
-      console.log(e4); // [1,2] 가 출력된다.
+      console.log(e4); // [1,2,4,3] 가 출력된다.
+
+      // 5. map
+      console.log('5.============= 반복하기');
+      const a5 = [1, 2, 3];
+      //   for (let i = 0; i < a5.length; i++) {
+      //     console.log(a5[i]);
+      //   }
+      //   a5.forEach((n) => {
+      //     console.log(n);
+      //   }); // a5 출력 변수는 마음대로 적어도된다
+      // return값이 void이다
+      const b5 = a5.map((n) => {
+        return n;
+      });
+      console.log(b5); // 1,2,3
     </script>
   </body>
 </html>
