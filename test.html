@@ -62,6 +62,30 @@
         return n;
       });
       console.log(b5); // 1,2,3
+
+      console.log('=====================================');
+
+      const data = { phone: '2222' };
+      const a6 = { id: 1, name: '홍길동', phone: '1111' };
+      const d6 = { ...a6, ...data };
+      console.log(d6);
+
+      /// 수정
+      const users = [
+        { id: 1, name: '구태모', phone: '2222' },
+        { id: 2, name: '구노데', phone: '3333' },
+        { id: 3, name: '매어료', phone: '4444' },
+      ];
+
+      const updateUserDto = {
+        id: 2,
+        name: '홍길동',
+      };
+
+      const newUsers = users.map((user) =>
+        user.id === updateUserDto.id ? { ...user, ...updateUserDto } : user,
+      );
+      console.log('newUsers', newUsers);
     </script>
   </body>
 </html>
