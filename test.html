@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // concat, filter, map, slice, 스프레드(전개) 연산자
+      //1. 깊은복사 ->  a,b에서 b에복사하고 데이터변경하면 a는 안바뀌는거
+      const a = [1, 2, 3];
+      const b = [...a]; // [1,2,3] 스프레드 연산자
+      console.log('1.============= 스프레드 연산자');
+      b.push(4); // b의 데이터 변경
+      console.log(`a의값 ${a}`); // 1,2,3
+      console.log(`b의값 ${b}`); // 1,2,3,4
+
+      //2. concat 추가하기
+      console.log('2.============= 추가하기');
+      const a2 = [1, 2, 3];
+      const b2 = a2.concat(4); // a2에 4가추가된 배열이 b2로간다
+      console.log(`a2의값 ${a2}`); // 1,2,3
+      console.log(`b2의값 ${b2}`); // 1,2,3,4
+      const c2 = [0, ...a2, 4]; // concat이랑 똑같다. 앞뒤 다추가가능 but 사이는 추가안됨
+      console.log(`c의값 ${c2}`); // 0,1,2,3,4
+
+      //3. filter 걸러내기 , 삭제하기
+      console.log('3.============= 걸러내기');
+      const a3 = [1, 2, 3];
+      const b3 = a3.filter((n) => {
+        return n != 1;
+      }); // bool을 return 받는다 -> true만 걸러낸다.
+      // 1이 아닌것만 true니깐 2,3출력된다.
+      console.log(b3); // 2,3
+
+      //4. slice 잘라내기
+      console.log('3.============= 잘라내기');
+      const a4 = [1, 2, 3];
+      const b4 = a4.slice(0, 2); // 0번index부터 1번index까지
+      console.log(b4); // [1,2]
+      const c4 = [a4.slice(0, 2)]; //
+      console.log(c4); // 배열안에 [[1,2]]
+      const d4 = [...a4.slice(0, 2)]; // 스프레드로 흩뿌려주면
+      console.log(d4); // [1,2] 가 출력된다.
+
+      console.log('=============');
+      const e4 = [...a4.slice(0, 2), 4, ...a4.slice(2, 3)];
+      console.log(e4); // [1,2] 가 출력된다.
+    </script>
+  </body>
+</html>
