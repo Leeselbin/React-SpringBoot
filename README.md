@@ -42,12 +42,83 @@ function App() {
 }
 ```
 
-(2) 변수선언은 let 혹은 const로만 해야한다. 호이스팅때문에 ^^ hoisting 궁금하면 500원!
+(2) 변수선언은 let 혹은 const로만 해야한다. 호이스팅때문에 ^^ hoisting 궁금하면 500원! const는 상수 let은 변수
 
 ```javascript
 const a = 10;
 function App() {
   const b = 20;
-  return <div>TEST</div>;
+  return (
+    <div>
+      {a},{b}
+    </div>
+  );
+}
+```
+
+(3) if사용 불가능X -> 삼항연산자 (조건 ? 값(true) : 값(false))
+
+```javascript
+const a = 10;
+function App() {
+  const b = 20;
+  return <div>안녕{a === 10 ? '10입니다' : '10이아닙니다'}</div>;
+}
+```
+
+(4) 조건부 렌더링 -> {b === 20 && 값(true) } // b가 20이면 true 근데 fasle 는 없다!
+
+```javascript
+const a = 10;
+function App() {
+  const b = 20;
+  return (
+    <div>
+      안녕{a === 10 ? '10입니다' : '10이아닙니다'}
+      <h1>렌더링테스트{b === 20 && '20입니다'}</h1>
+    </div>
+  );
+}
+```
+
+(5) return에서 한줄이면 ()괄호가 필요없는데 태그2개이상이면 ()괄호필요하다!!
+
+```javascript
+function App() {
+  return (
+    <div>
+      <div></div>
+    </div>
+  );
+}
+```
+
+(6) 변수는 있는데 값이 지정안되면 undefined
+
+```javascript
+let a = 10; //변수
+const b = 20; //상수
+function App() {
+  let c; //
+  console.log(1, c); // undefined뜬다. java엿으면 null
+  return <div>안녕</div>;
+}
+```
+
+(7) CSS디자인
+
+- 내부에 적는 방법 style={} - 추천 하지 않는다!!!!!!
+- 외부 파일에 적는 방법 - ex) import './App.css';
+- 라이브러리 사용(부트스트랩, component-styled)
+
+```javascript
+const mystyle = {
+  color: 'red',
+};
+
+let a = 10; //변수
+const b = 20; //상수
+function App() {
+  return <div style={{ mystyle }}>안녕</div>;
 }
 ```
