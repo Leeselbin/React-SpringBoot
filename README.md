@@ -133,8 +133,7 @@ function App() {
       b.push(4); // b의 데이터 변경
       console.log(`a의값 ${a}`); // 1,2,3
       console.log(`b의값 ${b}`); // 1,2,3,4
-      ```
-      ```html
+
       //2. concat 추가하기
       console.log('2.============= 추가하기');
       const a2 = [1, 2, 3];
@@ -166,3 +165,4 @@ function App() {
       console.log('============= 삽입 ');
       const e4 = [...a4.slice(0, 2), 4, ...a4.slice(2, 3)];
       console.log(e4); // [1,2,4,3] 가 출력된다.
+      ```
