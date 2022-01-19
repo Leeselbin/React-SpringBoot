@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+#### 버전확인
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+noder --version, npm --version
 
-## Available Scripts
+#### npm , npx
 
-In the project directory, you can run:
+npm -> 라이브러리 다운 -빌드 -> 프로젝트3개가 있으면 로컬에 다 다운받는다
 
-### `npm start`
+npx -> 라이브러리 다운 -빌드 -> 프로젝트가 이미다운받은게 있으면 재사용 -> 실행 -> 삭제
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### React 설치
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npx create-react-app 이름
+(ex) npx create-react-app blog
 
-### `npm test`
+#### JSX
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+javascript에다 HTML코드를 적는문법
+HTML에서 java쓸라면 jsp템플릿엔진 쓰는거랑 같은맥락
 
-### `npm run build`
+#### React 특징
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- SPA(Single Page Application) -> a태그 같은거 못쓴다.
+- 페이지를 이동하는거 -> body의 내용을 바꾸는 것이라 이해하면됨
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### 바벨 자바스크립트 ES5 -> ES6 바뀌면서 함수안먹는거 바꿔주는 오픈소스
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+#### JSX 문법
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+// (1) return시에 하나의 Dom만 리턴할 수 있다.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```javascript
+function App() {
+  return (
+    <div>
+      <div></div>
+      TEST
+    </div>
+  );
+}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+// (2) 변수선언은 let 혹은 const로만 해야한다. 호이스팅때문에 ^^
+// (2) hoisting 궁금하면 500원!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```javascript
+const a = 10;
+function App() {
+  const b = 20;
+  return <div>TEST</div>;
+}
+```
