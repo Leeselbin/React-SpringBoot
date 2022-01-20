@@ -1,32 +1,18 @@
 import { createRef, useEffect, useMemo, useRef, useState } from 'react';
+import styled from 'styled-components';
 import './App.css';
 
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
 function App() {
-  const myRef = useRef(null);
-
-  const [listm, setList] = useState([
-    { id: 1, name: '길동' },
-    { id: 2, name: '꺽정' },
-  ]);
-
-  const myRefs = Array.from({ length: listm.length }).map(() => createRef());
-
   return (
     <div>
-      <button
-        onClick={() => {
-          console.log(myRef);
-          console.log(myRef.current);
-          //myRef.current.style.backgroundColor = 'red';
-          myRefs[1].current.style.backgroundColor = 'red';
-        }}
-      >
-        색 변경
-      </button>
-      <div ref={myRef}> 박스 </div>
-      {listm.map((user, index) => (
-        <h1 ref={myRefs[index]}>{user.name}</h1>
-      ))}
+      <Title>ㅎㅇㅎㅇ</Title>
+      <h1>ddd</h1>
     </div>
   );
 }

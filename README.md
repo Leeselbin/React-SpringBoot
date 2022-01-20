@@ -13,6 +13,17 @@ npx -> 라이브러리 다운 -빌드 -> 프로젝트가 이미다운받은게 �
 npx create-react-app 이름
 (ex) npx create-react-app blog
 
+#### style-components 설치
+
+Why use? : css파일로 따로 만드는건 재사용성있는데 따로 관리할때는 하나의js파일에할수 있으니 나름장점이 있음.. 먼지는 잘 모르겠다~
+
+```
+- with npm
+npm install --save styled-components
+- with yarn
+yarn add styled-components
+```
+
 #### JSX
 
 javascript에다 HTML코드를 적는문법
