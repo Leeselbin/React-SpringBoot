@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div>
-      <ListPage />
+      <h1>최상단 화면 </h1>
     </div>
   );
 }
