@@ -15,7 +15,8 @@ npx create-react-app 이름
 
 #### style-components 설치
 
-Why use? : css파일로 따로 만드는건 재사용성있는데 따로 관리할때는 하나의js파일에할수 있으니 나름장점이 있음.. 먼지는 잘 모르겠다~
+Why use? : css파일로 따로 만드는건 재사용성있다는 장점
+: but style-component쓰면 Header나 Footer같은 거 컴포넌트에 편함
 
 ```
 - with npm
@@ -244,3 +245,9 @@ fuction App(){
  return
 export default App;
 ```
+
+---
+
+#### props
+
+<Home boards={boards} /> <- props예시
