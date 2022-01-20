@@ -1,12 +1,13 @@
-import { createRef, useEffect, useMemo, useRef, useState } from 'react';
-import styled from 'styled-components';
-import './App.css';
-import HomePage from './pages/HomePage';
+// 글쓰기, 글삭제, 글목록보기
+
+import ListPage from './pages/ListPage';
 
 function App() {
+  //상태
+
   return (
     <div>
-      <HomePage />
+      <ListPage />
     </div>
   );
 }

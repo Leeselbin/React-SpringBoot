@@ -1,3 +1,5 @@
+### 현재 v5버전 쓰는데 v6버전 문법으로 싹바꾸고 다시 올릴예정이다 후...
+
 #### 버전확인
 
 noder --version, npm --version
@@ -251,3 +253,18 @@ export default App;
 #### props
 
 <Home boards={boards} /> <- props예시
+const { boards } = props; <- 자식에서 받을때
+
+사용할떄
+
+```javascript
+{
+  boards.map((board) => (
+    <h3>
+      제목: {board.title} 내용:{board.content}
+    </h3>
+  ));
+}
+```
+
+#### navigation
