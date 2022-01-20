@@ -22,8 +22,20 @@ HTML에서 java쓸라면 jsp템플릿엔진 쓰는거랑 같은맥락
 
 - SPA(Single Page Application) -> a태그 같은거 못쓴다.
 - 페이지를 이동하는거 -> body의 내용을 바꾸는 것이라 이해하면됨
+- export default App <-- App함수를 외부에 노출시키겟다
+- import 할때는 import App from './App'; <<<- ./ 는 같은폴더
+
+- 다른파일에 잇는 let num = 10 변수를 땡겨올때는 import {num} from './App'이런식으로
+- import {변수} from 경로;
 
 #### 바벨 자바스크립트 ES5 -> ES6 바뀌면서 함수안먹는거 바꿔주는 오픈소스
+
+---
+
+#### CSS 선언
+
+- import './App.css';
+- <div calssName="css에서정의한 태그"> text </div>
 
 ---
 
@@ -123,6 +135,10 @@ function App() {
 }
 ```
 
+---
+
+## React Hooks 라이브러리~~!!!
+
 #### concat, filter, map, slice, 스프레드(전개) 연산자
 
       ```html
@@ -181,3 +197,39 @@ function App() {
       });
       console.log(b5); // 1,2,3
       ```
+
+#### useEffect()
+
+실행시점
+(1) App() 함수가 최초 실행될 때 - 그림이 최초 그려질 때
+(2) 상태 변수가 변경될 때 (그게 dependencyList에 등록되어 있어야함)
+(3) 의존리스트 관리를 할 수 있다.
+
+표현 useEffect
+
+```javascript
+fuction App(){
+useEffect(() =>{
+      //콜백함수 들어감
+      console.log('useEffect 실행됨');
+}, [어떠한 data가 들어갈떄 콜백을할지 결정할 data]);
+// [] 빈공백이면 어느곳에도 의존하지않아서 최초에만 실행된다.
+}
+export default App;
+```
+
+#### useMemo() - 메모라이제이션(기억)
+
+예를들어 상태변수가 변경될때마다 마운트가 싹다시되니깐 부분별로 바꾸려고 씀
+
+표현 useMemo
+
+```javascript
+fuction App(){
+ const [list, setList] = useState([1, 2, 3, 4]);
+ const addResult = useMemo(() => getAddResult(), [list]);
+ // useMemo(() => 함수, dependency)
+ // list가 변할때에만 getAddResult()가 실행된다.
+ return
+export default App;
+```
