@@ -3,7 +3,6 @@ import './App.css';
 import Bottom from './components/Bottom';
 import Top from './components/Top';
 import React, { useState } from 'react';
-import counter from './store';
 
 function App() {
   return (
